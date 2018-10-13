@@ -19,8 +19,7 @@ const delayMS = (ms) => {
 
 const pool = genericPool.createPool({
     create: async () => {
-        i++;
-        console.log(`create instance ${i}`);
+
         if (!proxies.length) {
             proxies = [...options.proxy];
         }
@@ -32,6 +31,8 @@ const pool = genericPool.createPool({
                 // `--ignore-certificate-errors`
             ]
         });
+        i++;
+        console.log(`create instance ${i}`);
         instance._own = {
             proxy,
             tor: control,
@@ -68,9 +69,9 @@ async function run(emails = []) {
         pool.acquire()
             .then(async browser => {
                 let log = {};
-                await delayMS(1000)
+                await delayMS(30000);//to test works all fine or no.
                 const email = await getAvailableEmail();
-                console.log(`${email} handled`)
+                console.log(`${email} handled by ${browser._own.numInstance}`)
                 pool.destroy(browser);})
                 /*try {
                     console.log('Initializing')
