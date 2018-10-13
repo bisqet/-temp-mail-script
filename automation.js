@@ -47,7 +47,7 @@ const pool = genericPool.createPool({
 }, {
     max: proxies.length, // maximum size of the pool
     // max: 1, // maximum size of the pool
-    min: 1, // minimum size of the pool
+    min: proxies.length, // minimum size of the pool
 });
 
 let items = [];
