@@ -19,7 +19,7 @@ const delayMS = (ms) => {
 
 const pool = genericPool.createPool({
     create: async () => {
-        console.log(`create instance called`);
+        //console.log(`create instance called`);
         if (!proxies.length) {
             proxies = [...options.proxy];
         }
