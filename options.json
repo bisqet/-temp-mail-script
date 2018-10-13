@@ -1,0 +1,16 @@
+{
+  "proxy": [
+    {
+      "control": "localhost:2774",
+      "proxy": "socks5://localhost:2773"
+    },
+    {
+      "control": "localhost:2774",
+      "proxy": "socks5://localhost:2773"
+    }
+  ],
+  "anticaptcha": {
+    "accountkey": "***"
+  },
+  "regex": ""
+}
