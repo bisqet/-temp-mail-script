@@ -5,7 +5,7 @@
       "proxy": "socks5://localhost:2773"
     },
     {
-      "control": "localhost:2774",
+      "control": "localhost:1488",
       "proxy": "socks5://localhost:2773"
     }
   ],

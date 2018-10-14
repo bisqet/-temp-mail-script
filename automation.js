@@ -69,7 +69,7 @@ async function run(emails = []) {
         pool.acquire()
             .then(async browser => {
                 let log = {};
-                await delayMS(30000);//to test works all fine or no.
+                //await delayMS(30000);//to test works all fine or no.
                 const email = await getAvailableEmail();
                 console.log(`${email} handled by ${browser._own.numInstance}`)
                 pool.destroy(browser);})
